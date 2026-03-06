@@ -29,23 +29,32 @@ OPTFF : c
 
 ## How to run
 
+On macOS, the Python 3 interpreter is usually available as `python3`.  
+On many Linux/Windows setups, or if you've configured your system so `python` points to Python 3, you can use `python` instead.  
+Equivalent commands with both options are shown below.
+
 ### From the project root:
 
 ```bash
+# macOS (typical)
+python3 src/main.py
+
+# Linux/Windows or if `python` is Python 3
 python src/main.py
 ```
-
-### To test the cache input parser with the example file:
-
-```bash
-python -c "from src.cache_sim import parse_input; print(parse_input('data/example.in'))"
-```
-
-Expected output: `(3, [1, 2, 3, 4, 1, 2, 5, 1, 2, 3])`
 
 ### To run test files from the project root:
 
 ```bash
+# macOS (typical)
+python3 src/main.py tests/example.in
+python3 src/main.py tests/test1.in
+python3 src/main.py tests/test2.in
+python3 src/main.py tests/test3.in
+python3 src/main.py tests/test4.in
+python3 src/main.py tests/bestoptff.in
+
+# Linux/Windows or if `python` is Python 3
 python src/main.py tests/example.in
 python src/main.py tests/test1.in
 python src/main.py tests/test2.in
@@ -57,6 +66,10 @@ python src/main.py tests/bestoptff.in
 ### To add and run your own test files, follow this format:
 
 ```
+# macOS (typical)
+python3 src/main.py tests/<filename>.in
+
+# Linux/Windows or if `python` is Python 3
 python src/main.py tests/<filename>.in
 ```
 
