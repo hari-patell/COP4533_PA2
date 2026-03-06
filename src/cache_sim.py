@@ -64,7 +64,11 @@ def optff(k, requests):
             # loop and keep track of the cache item that is current farthest
             # index gives next occurence of cache item in requests
             for item in cache:
-                used = requests.index(item, idx+1)
+                try:
+                    used = requests.index(item, idx+1)
+                except ValueError:
+                    # item has no more reqs in requests
+                    used = float('inf')
                 
                 if used > farthest:
                     farthest = used
