@@ -17,19 +17,25 @@ k m
 
 See `tests/example.in` for reference.
 
-## Output
+## Output format
 
 Prints the cache miss amount for all three caching algorithms.
 
+```
+FIFO  : a
+LRU   : b
+OPTFF : c
+```
+
 ## How to run
 
-From the project root:
+### From the project root:
 
 ```bash
 python src/main.py
 ```
 
-To test the cache input parser with the example file:
+### To test the cache input parser with the example file:
 
 ```bash
 python -c "from src.cache_sim import parse_input; print(parse_input('data/example.in'))"
@@ -37,7 +43,7 @@ python -c "from src.cache_sim import parse_input; print(parse_input('data/exampl
 
 Expected output: `(3, [1, 2, 3, 4, 1, 2, 5, 1, 2, 3])`
 
-To run test files from the project root:
+### To run test files from the project root:
 
 ```bash
 python src/main.py tests/example.in
@@ -47,14 +53,16 @@ python src/main.py tests/test3.in
 python src/main.py tests/test4.in
 python src/main.py tests/bestoptff.in
 ```
-To add and run your own test files, follow this format:
+
+### To add and run your own test files, follow this format:
+
 ```
 python src/main.py tests/<filename>.in
 ```
 
 ### Clearing output files
 
-To remove all `.out` files from `tests/large_tests`:
+To remove all `.out` files from `/tests`:
 
 ```bash
 rm tests/*.out
